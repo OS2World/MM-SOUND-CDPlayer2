@@ -1,0 +1,28 @@
+/*************************************************************************
+ * cdplayer.rc (c) Axel Salomon fÅr Inside OS/2 Ausgabe 11'93
+ *************************************************************************/
+
+#define  INCL_OS2
+#include <os2.h>
+#include <sw.h>
+
+#include "cdplayer.h"
+
+RCINCLUDE cdplayer.dlg
+
+ICON ID_IC_CDPLAYER cdplayer.ico
+ICON ID_DLG_MEHR    cdplayer.ico
+
+ACCELTABLE ID_AC_CDPLAYER
+{
+    VK_END,         ID_PB_END,          VIRTUALKEY
+    VK_PAGEDOWN,    ID_PB_FORWARD,      VIRTUALKEY
+    VK_PAGEUP,      ID_PB_REWIND,       VIRTUALKEY
+    VK_HOME,        ID_PB_START,        VIRTUALKEY
+    VK_F2,          ID_PB_PLAY,         VIRTUALKEY
+    VK_F3,          ID_PB_PAUSE,        VIRTUALKEY
+    VK_F4,          ID_PB_STOP,         VIRTUALKEY
+    VK_F5,          ID_PB_EJECT,        VIRTUALKEY
+}
+
+

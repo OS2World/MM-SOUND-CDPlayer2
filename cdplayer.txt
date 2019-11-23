@@ -1,0 +1,52 @@
+*************************************************************************
+* cdplayer.doc (c) Axel Salomon fÅr Inside OS/2 Ausgabe 11'93           *
+*************************************************************************
+
+Dieses Softwarepaket besteht aus folgenden Modulen:
+
+cdplayer.c
+cdplayer.h
+cdplayer.rc
+cdplayer.dlg
+cdplayer.def
+cdplayer.ico
+cdplayer.mak
+cdplayer.obj
+cdplayer.exe
+cdplayer.doc
+
+CDPLAYER ist die erweiterte Version eines Audio CD Players auf Basis des
+Betriebssystems IBM OS/2 2.1 und MMPM/2 1.1, der in der Zeitschrift 
+Inside OS/2 Ausgabe November '93 beschrieben worden ist.
+
+Der Quellcode dieses Softwarepakets kann fÅr private Zwecke beliebig verÑndert
+und kopiert werden. Eine gewerbliche Nutzung (auch auszugsweise) ist nur mit
+Zustimmung des Autors erlaubt.
+
+Die Verteilung dieses Softwarepaketes in Mailboxen, auf Disketten oder CD's ist
+erwÅnscht, sofern keine énderungen am Inhalt des Paketes vorgenommen werden.
+
+Folgende Erweiterungen sind geplant:
+
+- HilfeunterstÅtzung
+- Druckerausgabe
+- Programmierung der Titelabfolge, Random-Play
+- Erweiterte Spielzeitanzeige (Restspielzeit, etc. )
+- Suchen
+- Bearbeitung der CD-Daten ohne Audio-CD
+- Datenbankschnittstelle statt INI-Datei (DBase und SQL)
+- Import/Export-Funktion
+
+Ich hoffe, da· sowohl der Audio CD Player Ihnen viel Spa· bei der Anwendung
+bereiten wird, als auch der Quellcode zu eigenen OS/2 Programmen viele
+Anregungen bietet.
+
+Der Autor.
+
+Axel Salomon
+StrÅmper Berg 10a
+40670 Meerbusch
+Deutschland
+
+Compuserve-Id: 100022,43
+

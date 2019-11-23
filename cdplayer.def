@@ -1,0 +1,13 @@
+;*************************************************************************
+;* cdplayer.def (c) Axel Salomon fÅr Inside OS/2 Ausgabe 11'93           *
+;*************************************************************************
+NAME        deplayer WINDOWAPI
+
+DESCRIPTION 'CD-Player - MMPM/2 Beispielprogramm fÅr Inside OS/2 11.93'
+
+STACKSIZE   32768
+HEAPSIZE    10240
+
+EXPORTS     CdplayerDlgProc
+
+

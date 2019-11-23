@@ -1,0 +1,85 @@
+/*************************************************************************
+ * cdplayer.dlg (c) Axel Salomon fr Inside OS/2 Ausgabe 11'93
+ *************************************************************************/
+
+DLGINCLUDE 1 "cdplayer.h"
+
+DLGTEMPLATE ID_DLG_CDPLAYER PRELOAD MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "MMPM/2 Beispiel - Inside OS/2 11'93 (c) Axel Salomon", 
+            ID_DLG_CDPLAYER, 0, 0, 422, 228, FS_NOBYTEALIGN | NOT 
+            FS_DLGBORDER | FS_SIZEBORDER | WS_VISIBLE, FCF_SYSMENU | 
+            FCF_TITLEBAR | FCF_MINBUTTON | FCF_VERTSCROLL | FCF_HORZSCROLL | 
+            FCF_NOBYTEALIGN | FCF_ICON
+    BEGIN
+        CONTROL         "", ID_FR_RAHMEN, 13, 154, 398, 54, WC_STATIC, 
+                        SS_FGNDFRAME | WS_GROUP | WS_VISIBLE
+        LTEXT           "CD-Titel", ID_SF_CDTITEL, 16, 216, 44, 8
+        LTEXT           "CD-Id:", ID_SF_CDID, 270, 216, 28, 8
+        LTEXT           "Lied Nr.", ID_SF_LIEDNR, 16, 197, 44, 8
+        LTEXT           "Autor", ID_SF_AUTOR, 16, 183, 44, 8
+        LTEXT           "Titel", ID_SF_TITEL, 16, 171, 44, 8
+        LTEXT           "L„nge", ID_SF_LAENGE, 16, 159, 44, 8
+        LTEXT           "Aktuell", ID_SF_ZEITAKTUELL, 16, 142, 44, 8
+        LTEXT           "Min:Sek:Frames", ID_SF_MSF, 110, 159, 66, 8
+        LTEXT           "Lautst„rke", ID_SF_LAUT, 94, 197, 53, 8
+        ENTRYFIELD      "", ID_EF_CDTITEL, 65, 216, 196, 8, ES_MARGIN
+        ENTRYFIELD      "", ID_EF_CDID, 303, 216, 107, 8, ES_MARGIN | 
+                        ES_READONLY
+        SPINBUTTON      ID_SB_LIEDNR, 63, 195, 25, 12, SPBS_NUMERICONLY | 
+                        SPBS_MASTER | SPBS_JUSTRIGHT | SPBS_FASTSPIN | 
+                        WS_GROUP
+        SPINBUTTON      ID_SB_VOLUME, 148, 195, 31, 12, SPBS_NUMERICONLY | 
+                        SPBS_MASTER | SPBS_JUSTRIGHT | SPBS_FASTSPIN | 
+                        WS_GROUP
+        AUTOCHECKBOX    "Titelanzeige mit Musik verbinden", ID_CKB_TRENNEN, 
+                        250, 196, 156, 10
+        ENTRYFIELD      "", ID_EF_AUTOR, 65, 183, 339, 8, ES_MARGIN
+        ENTRYFIELD      "", ID_EF_TITEL, 65, 171, 339, 8, ES_MARGIN
+        ENTRYFIELD      "", ID_EF_LAENGE, 65, 159, 40, 8, ES_MARGIN | 
+                        ES_READONLY
+        ENTRYFIELD      "", ID_EF_ZEITAKTUELL, 65, 142, 50, 8, ES_MARGIN
+        CONTROL         "", ID_SCR_ANZEIGE, 121, 143, 290, 6, WC_SCROLLBAR, 
+                        SBS_HORZ | WS_VISIBLE
+        PUSHBUTTON      "| >", ID_PB_PLAY, 16, 117, 20, 14
+        PUSHBUTTON      "| |", ID_PB_PAUSE, 42, 117, 20, 14
+        PUSHBUTTON      "²²", ID_PB_STOP, 68, 117, 20, 14
+        PUSHBUTTON      "|<<", ID_PB_START, 94, 117, 20, 14
+        PUSHBUTTON      "< <", ID_PB_REWIND, 120, 117, 20, 14
+        PUSHBUTTON      "<", ID_PB_SECBACKWARD, 146, 117, 20, 14
+        PUSHBUTTON      ">", ID_PB_SECFORWARD, 172, 117, 20, 14
+        PUSHBUTTON      "> >", ID_PB_FORWARD, 198, 117, 20, 14
+        PUSHBUTTON      ">>|", ID_PB_END, 224, 117, 20, 14
+        PUSHBUTTON      "~Eject", ID_PB_EJECT, 250, 117, 40, 14
+        PUSHBUTTON      "~Mehr ...", ID_PB_MEHR, 296, 117, 47, 14
+        PUSHBUTTON      "~Hilfe", ID_PB_HILFE, 370, 117, 40, 14, BS_HELP
+        CONTAINER       ID_CNR_TITELANZEIGE, 15, 14, 395, 94, CCS_SINGLESEL | 
+                        CCS_VERIFYPOINTERS | CCS_READONLY | WS_GROUP
+    END
+END
+
+DLGTEMPLATE ID_DLG_MEHR LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Weitere Eintr„ge zur CD", ID_DLG_MEHR, 6, 37, 350, 154, 
+            FS_NOBYTEALIGN | NOT FS_DLGBORDER | FS_SIZEBORDER | WS_VISIBLE, 
+            FCF_SYSMENU | FCF_TITLEBAR | FCF_MINBUTTON | FCF_VERTSCROLL | 
+            FCF_HORZSCROLL | FCF_NOBYTEALIGN | FCF_ICON
+    BEGIN
+        LTEXT           "Musik von", ID_SF_MUSIK, 5, 136, 82, 8
+        LTEXT           "Text von", ID_SF_TEXT, 5, 124, 82, 8
+        LTEXT           "Musikrichtung", ID_SF_MUSIKRICHTUNG, 5, 112, 82, 8
+        LTEXT           "Takte pro Minute", ID_SF_TAKTE, 5, 100, 82, 8
+        LTEXT           "Erscheinungsdatum", ID_SF_AUSGABE, 5, 88, 82, 8
+        LTEXT           "Bemerkungen", ID_SF_BEMERKUNG, 5, 76, 82, 8
+        ENTRYFIELD      "", ID_EF_MUSIK, 99, 136, 236, 8, ES_MARGIN
+        ENTRYFIELD      "", ID_EF_TEXT, 99, 124, 236, 8, ES_MARGIN
+        ENTRYFIELD      "", ID_EF_RICHTUNG, 99, 112, 236, 8, ES_MARGIN
+        ENTRYFIELD      "", ID_EF_TAKTE, 99, 100, 236, 8, ES_MARGIN
+        ENTRYFIELD      "", ID_EF_AUSGABE, 99, 88, 56, 8, ES_MARGIN
+        MLE             "", ID_MLE_BEMERKUNGEN, 97, 4, 240, 81, MLS_WORDWRAP | 
+                        MLS_VSCROLL | MLS_IGNORETAB | WS_GROUP
+        PUSHBUTTON      "~Speichern", ID_PB_SPEICHERN, 5, 4, 54, 14
+        PUSHBUTTON      "~Abbrechen", ID_PB_ABBRECHEN, 5, 20, 54, 14
+    END
+END
+
